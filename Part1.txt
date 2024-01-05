@@ -1,0 +1,44 @@
+Definitions:
+1. What is HTTP?
+* HTTP (Hypertext Transfer Protocol) is the foundational protocol used for transmitting data over the web. It is a  set of rules that allow web servers and browsers to communicate with each other. It defines how messages are formatted and transmitted, and what actions web servers and browsers should take in response to various commands. 
+
+2. What is a URL?
+* A URL (Uniform Resource Locator) is the address used to access a resource on the internet. It's what you type into the browser's address bar. A URL specifies the location of a resource (like a web page) on the internet and a mechanism (usually HTTP or HTTPS) for retrieving it.
+
+3. What is DNS?
+* DNS (Domain Name System) is like the phonebook of the internet. It translates human-friendly domain names (like www.example.com) into IP addresses (like 192.0.2.1) that computers use to identify each other on the network. DNS ensures you reach the correct website when you type a domain name into your browser.
+
+4. What is a query string?
+* A query string is a part of a URL that assigns values to specified parameters. It typically follows a question mark (?) and can consist of multiple parameters separated by ampersands (&). For example, in "http://example.com/?search=dress&color=blue", 'search' and 'color' are parameters with assigned values 'dress' and 'blue', respectively.
+
+5. What are two HTTP verbs and how are they different?
+* GET: Used to request data from a specified resource. GET requests should only retrieve data and have no other effect.
+* POST: Used to send data to a server to create/update a resource. POST requests are often used when submitting form data or uploading a file.
+* The primary difference is that GET is used to retrieve data, while POST is used to send data to the server.
+
+6. What is an HTTP request?
+* An HTTP request is a message sent by a client (usually a web browser) to a server asking for information or a resource. It includes a request line (with the HTTP method, URL, and HTTP version), headers with additional information, and sometimes a body containing data.
+
+7. What is an HTTP response?
+* An HTTP response is the message sent by the server back to the client after it has received and interpreted the HTTP request. It contains a status line (which includes the HTTP version, a status code, and a status message), headers with additional information, and sometimes a body containing the requested resource.
+
+8. What is an HTTP header? Give a couple examples of request and response headers you have seen.
+* An HTTP header is a component of the header section in request and response messages that provides information about the request or response. It can contain metadata, authentication credentials, and other details.
+    * Request headers examples:
+    * User-Agent: Identifies the client software making the request.
+    * Accept: Specifies the media types that the client can handle.
+    * Response headers examples:
+    * Content-Type: Indicates the media type of the resource (e.g., text/html).
+    * Set-Cookie: Used to send cookies from the server to the user agent.
+
+9. What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+When you type a URL like "http://somesite.com/some/page.html" into a browser, several processes occur to fetch and display the web page:
+* 		URL Parsing: The browser parses the URL to identify the protocol (HTTP), domain (somesite.com), and path (/some/page.html).
+* 		DNS Lookup: The browser initiates a Domain Name System (DNS) lookup to translate the domain name into an IP address, which is necessary for locating the server that hosts the website.
+* 		Establishing a Connection: Using the IP address, the browser establishes a connection to the server. For HTTP, this is typically a TCP (Transmission Control Protocol) connection.
+* 		Sending the HTTP Request: The browser sends an HTTP request to the server, asking for the page "/some/page.html".
+* 		Server Response: The server processes the request and sends back a response. The response usually contains the HTML content of the requested page, along with status codes and other HTTP headers.
+* 		Rendering the Page: The browser begins rendering the HTML content. It parses the HTML, CSS, and JavaScript, constructing the Document Object Model (DOM) of the page.
+* 		Processing Scripts and Styles: As the browser renders the page, it may encounter links to JavaScript files, CSS stylesheets, or images. These require additional HTTP requests to fetch and process.
+* 		Displaying the Page: Once all resources are loaded and scripts executed, the final page is displayed to you.
+Throughout this process, additional factors can influence the behavior, such as browser cache (which might eliminate the need for some network requests), cookies (which might customize the request), and security checks (like cross-origin policies). If the URL uses HTTPS instead of HTTP, there is also an encryption layer involved, which includes a handshake process to establish a secure connection.
